@@ -1,4 +1,4 @@
-package src.rohit;
+package rohit;
 
 
 
