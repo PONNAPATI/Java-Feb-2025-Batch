@@ -1,6 +1,4 @@
-package src.sahithi;
-
-
+package sahithi;
 
 public class Employee {
     public static void main(String[] args) {
