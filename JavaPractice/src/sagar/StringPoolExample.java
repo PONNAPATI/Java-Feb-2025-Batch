@@ -21,9 +21,9 @@ public class StringPoolExample {
 /*
 
 == compares memory location, so:
-student1Grade == student2Grade → true (same reference in String Pool)
-student1Grade == student3Grade → false (different objects)
+student1 == student2 → true (same reference in String Pool)
+student1 == student3 → false (different objects)
         .equals() compares actual content, so:
-        student1Grade.equals(student3Grade) → true (same content)
+        student1Grade.equals(student3) → true (same content)
 
         */
