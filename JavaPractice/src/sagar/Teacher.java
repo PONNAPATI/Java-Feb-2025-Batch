@@ -4,6 +4,6 @@ public class Teacher {
         String firstName;
         String schoolName;
         String subjectID;
-
+        System.out.println("");
     }
 }
