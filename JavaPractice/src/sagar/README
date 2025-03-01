@@ -1,0 +1,143 @@
+String Methods
+
+        Basic Info
+        Checking Length and Emptiness
+        Comparisons
+        Searching and Indexing
+        Extracting and Splitting
+        Replacing and Formatting
+        Case Conversion and Trimming
+        Regex Operations
+        Examples in Action
+
+    Basic Info
+        Immutability: All String objects in Java are immutable. Every method that appears to modify a string actually creates and returns a new string.
+        String Pool: Literal strings (e.g., "Hello") are interned in the string pool. Reusing them can save memory.
+
+Checking Length and Emptiness
+
+    1.length()
+        Returns the number of characters in the string.
+
+            String text = "Hello";
+            int len = text.length();  // 5
+
+    2.isEmpty()
+        Returns true if the string length is 0, otherwise false.
+
+        String emptyStr = "";
+        System.out.println(emptyStr.isEmpty()); // true
+
+Comparisons
+
+    1.equals(Object anObject)
+        Checks if two strings contain the same characters in the same order.
+
+        String a = "Java";
+        String b = "Java";
+        System.out.println(a.equals(b));  // true
+
+    2.equalsIgnoreCase(String anotherString)
+        Similar to equals(), but ignores case differences.
+
+        String c = "JAVA";
+        System.out.println(a.equalsIgnoreCase(c)); // true
+
+    3.compareTo(String anotherString) / compareToIgnoreCase(String anotherString)
+        Compares strings lexicographically, returning a negative integer, zero, or a positive integer if the string is less than, equal to, or greater than the compared string.
+
+        String x = "Apple";
+        String y = "Banana";
+        System.out.println(x.compareTo(y)); // Negative value (Apple < Banana)
+
+Searching and Indexing
+
+    1.contains(CharSequence s)
+        Returns true if the sequence is found in the string, false otherwise.
+
+        String sentence = "Hello World";
+        System.out.println(sentence.contains("World")); // true
+
+    2.indexOf(String str) / lastIndexOf(String str)
+        Returns the first/last position of the specified substring. Returns -1 if not found.
+
+        String text = "Hello World";
+        System.out.println(text.indexOf("o"));    // 4
+        System.out.println(text.lastIndexOf("o")); // 7
+
+    3.startsWith(String prefix) / endsWith(String suffix)
+        Checks whether the string starts or ends with the specified substring.
+
+        String filename = "report.pdf";
+        System.out.println(filename.endsWith(".pdf"));  // true
+
+Extracting and Splitting
+
+    1.charAt(int index)
+        Returns the character at the specified index (0-based).
+
+        String str = "Hello";
+        char c = str.charAt(1);  // 'e'
+
+    2.substring(int beginIndex) / substring(int beginIndex, int endIndex)
+        Extracts a portion of the string from the specified indices.
+
+        String phrase = "Hello World";
+        System.out.println(phrase.substring(6));   // "World"
+        System.out.println(phrase.substring(0, 5)); // "Hello"
+
+    3.split(String regex)
+        Splits the string around matches of the given regex, returning an array of substrings.
+
+        String csv = "Alice,Smith,30,Engineer";
+        String[] fields = csv.split(",");
+            // ["Alice", "Smith", "30", "Engineer"]
+
+Replacing and Formatting
+    1.replace(CharSequence target, CharSequence replacement)
+        Replaces all occurrences of target with replacement.
+
+        String line = "Hello 2022, new year 2022";
+        String updated = line.replace("2022", "2023");
+            // "Hello 2023, new year 2023"
+
+    2.replaceAll(String regex, String replacement) / replaceFirst(String regex, String replacement)
+        replaceAll(...): replaces all matches of a regex
+        replaceFirst(...): replaces only the first match of a regex
+
+        String text = "foo1 foo2 foo3";
+        System.out.println(text.replaceAll("foo\\d", "bar"));   // "bar bar bar"
+
+    3.String.format(String format, Object... args)
+        Returns a formatted string, similar to System.out.printf().
+
+        String greeting = String.format("Hello %s, you are %d years old.", "Alice", 30);
+            // "Hello Alice, you are 30 years old."
+
+Case Conversion and Trimming
+
+    1.toLowerCase() / toUpperCase()
+        Converts the entire string to lower or upper case.
+
+        String name = "John Doe";
+        System.out.println(name.toLowerCase());  // "john doe"
+        System.out.println(name.toUpperCase());  // "JOHN DOE"
+    2.trim()
+        Removes leading and trailing whitespace.
+
+        String spaced = "   Hello World   ";
+        System.out.println(spaced.trim()); // "Hello World"
+
+Regex Operations
+
+    1.matches(String regex)
+        Returns true if the entire string matches the given regex, otherwise false.
+
+        String phone = "1234567890";
+        boolean isDigitsOnly = phone.matches("\\d+"); // true
+
+    2.replaceAll(String regex, String replacement)
+        As mentioned above, uses regex to replace all matches in the string.
+
+    3.split(String regex)
+        Splits the string into an array, based on the provided regex pattern (seen above).

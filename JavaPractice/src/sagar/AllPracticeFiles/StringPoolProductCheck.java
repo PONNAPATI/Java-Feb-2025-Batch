@@ -1,3 +1,5 @@
+package AllPracticeFiles;
+
 public class StringPoolProductCheck {
     public static void main(String[]args){
 
