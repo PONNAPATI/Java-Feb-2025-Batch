@@ -88,6 +88,7 @@ public class Arithmetic_operators {
         System.out.println("do S is equal to 56:" +(S==56));
         System.out.println("do H is greater than or equal to 45:" +(H>=45));
         System.out.println("do E is less than or equal to 48:" +(E<=48));
+
         System.out.println("do H is less than D:" +(H<D));
 
     }
