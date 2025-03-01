@@ -15,7 +15,7 @@ public class Nested_IF {
             if (Number % 6 == 0) {
                 System.out.println("The number is divisible by 6");
             } else{
-                System.out.println("The number is not divisible by 6");
+                System.out.println("The number is not divisible by 6 ");
             }
         }
         else {
