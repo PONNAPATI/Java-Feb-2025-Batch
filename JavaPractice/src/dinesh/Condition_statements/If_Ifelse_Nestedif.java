@@ -1,6 +1,5 @@
-package dinesh;
+package dinesh.Condition_statements;
 
-import java.util.Collection;
 import java.util.Scanner;
 
 public class If_Ifelse_Nestedif {
