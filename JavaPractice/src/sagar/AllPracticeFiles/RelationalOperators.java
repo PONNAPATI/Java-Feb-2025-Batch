@@ -1,3 +1,5 @@
+package AllPracticeFiles;
+
 public class RelationalOperators {
     public static void main(String[]args){
         int x= 19, y = 78;
