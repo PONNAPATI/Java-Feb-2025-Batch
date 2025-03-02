@@ -1,3 +1,5 @@
+package AllPracticeFiles;
+
 public class StringPoolExample {
     public static void main(String[]args){
 
