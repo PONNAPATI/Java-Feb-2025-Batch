@@ -3,7 +3,7 @@ package ClassAndMethods.socialmedia;
 import java.util.ArrayList;
 import java.util.List;
 
-/** This class represents a social media post. Users can like the post and add comments. */
+/**  This class represents a social media post. Users can like the post and add comments.  */
 
 public class Post {
     String content;

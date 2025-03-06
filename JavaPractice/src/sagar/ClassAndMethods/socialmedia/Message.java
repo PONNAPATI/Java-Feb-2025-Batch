@@ -1,9 +1,7 @@
 package ClassAndMethods.socialmedia;
 
 public class Message {
-    /**
-     * This class represents a simple message between two users.
-     */
+    /** This class represents a simple message between two users. */
     String sender;
     String receiver;
     String messageText;
