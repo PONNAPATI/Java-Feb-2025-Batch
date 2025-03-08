@@ -1,4 +1,4 @@
-package MethodOverriding;
+package MethodOverriding.Employee;
 
 public class Employee {
     protected String name;

@@ -1,4 +1,4 @@
-package MethodOverriding;
+package MethodOverriding.Animal;
 
 public class Animal {
     public void makeSound(){

@@ -1,4 +1,4 @@
-package MethodOverriding;
+package MethodOverriding.Animal;
 
 public class MainAnimal {
      public static void main(String[] args) {
