@@ -1,3 +1,5 @@
+package AllPracticeFiles;
+
 public class RestaurantHours {
     public static void main(String[]args){
         int currentHour = 11;
