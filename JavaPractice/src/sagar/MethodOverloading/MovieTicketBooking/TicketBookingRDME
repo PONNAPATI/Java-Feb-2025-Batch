@@ -1,0 +1,35 @@
+MovieTicketBooking: Key Points on Method Overloading
+
+1.Overview
+
+        The class uses method overloading by declaring multiple methods named bookTicket, each accepting different parameters.
+        This design allows users to book a ticket in various ways, from a basic single-ticket scenario to more advanced bookings with seat types and discount codes.
+
+2.Compile-Time Binding
+
+        Overloading is determined at compile time. The compiler matches method calls to the appropriate version by comparing the number and types of arguments.
+
+3.Distinct Parameter Lists
+
+        Each method’s signature varies in how many arguments are expected (e.g., just a movie name, or a movie name plus ticket count, seat type, and discount code).
+        These unique signatures prevent ambiguity and enable a consistent, single method name (bookTicket).
+
+4.Default vs. Specific Behavior
+
+        Simpler overloads assume defaults like one ticket and a standard seat.
+        More detailed overloads accept parameters such as seat type or a discount code to fulfill specific booking requirements.
+
+5.Design & Maintenance
+
+        Method overloading helps maintain a clean, discoverable API:
+            You only need one conceptual method name, bookTicket.
+            Adding new features (e.g., seat rows, loyalty points) can be done by creating another overload without disrupting existing code.
+
+6.Relation to Other OOP Features
+
+        Overloading (compile-time) differs from overriding (runtime).
+        Both belong to polymorphism, but at different binding stages.
+
+7.Conclusion
+
+By providing multiple ways to call the same method, MovieTicketBooking offers flexibility and clarity, illustrating how method overloading can elegantly handle a range of booking scenarios while remaining straightforward to use.
