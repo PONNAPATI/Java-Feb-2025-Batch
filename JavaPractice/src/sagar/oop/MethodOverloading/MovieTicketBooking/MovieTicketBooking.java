@@ -1,4 +1,4 @@
-package MethodOverloading.MovieTicketBooking;
+package oop.MethodOverloading.MovieTicketBooking;
 
 public class MovieTicketBooking {
     // Overload #1: Book a basic ticket for a single person, default seat type

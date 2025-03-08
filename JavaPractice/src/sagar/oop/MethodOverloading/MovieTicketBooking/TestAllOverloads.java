@@ -1,4 +1,4 @@
-package MethodOverloading.MovieTicketBooking;
+package oop.MethodOverloading.MovieTicketBooking;
 
 public class TestAllOverloads {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package MethodOverloading.CoffeeMachine;
+package oop.MethodOverloading.CoffeeMachine;
 
 public class MainCoffeeMachine {
     public static void main(String[] args) {

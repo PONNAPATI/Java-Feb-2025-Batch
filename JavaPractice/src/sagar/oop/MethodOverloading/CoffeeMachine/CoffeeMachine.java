@@ -1,4 +1,4 @@
-package MethodOverloading.CoffeeMachine;
+package oop.MethodOverloading.CoffeeMachine;
 
 public class CoffeeMachine {
     // Overloaded method #1: Just brew a basic coffee
