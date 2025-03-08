@@ -1,4 +1,4 @@
-package MethodOverriding.Animal;
+package oop.MethodOverriding.Animal;
 
 public class MainAnimal {
      public static void main(String[] args) {

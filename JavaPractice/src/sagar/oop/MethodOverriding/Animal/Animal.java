@@ -1,4 +1,4 @@
-package MethodOverriding.Animal;
+package oop.MethodOverriding.Animal;
 
 public class Animal {
     public void makeSound(){
