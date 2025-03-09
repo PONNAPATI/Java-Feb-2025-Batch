@@ -1,4 +1,4 @@
-package MethodOverriding.Vehicle;
+package oop.MethodOverriding.Vehicle;
 
 public class MainVehicle {
     public static void main(String[] args) {

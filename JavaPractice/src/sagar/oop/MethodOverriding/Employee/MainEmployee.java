@@ -1,4 +1,4 @@
-package MethodOverriding.Employee;
+package oop.MethodOverriding.Employee;
 
 public class MainEmployee {
     public static void main(String[] args) {

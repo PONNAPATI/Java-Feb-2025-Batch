@@ -1,4 +1,4 @@
-package MethodOverriding.Vehicle;
+package oop.MethodOverriding.Vehicle;
 
 public class Vehicle {
     // Parent class method
