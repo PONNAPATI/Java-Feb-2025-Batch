@@ -5,6 +5,7 @@ import java.util.List;
 
 public class AbstratctionDemo {
     public static void main(String[] args) {
+//        CardPayment cardPayment = new CardPayment();
         Bank bank = new CardPayment();
         bank.pay();
 
