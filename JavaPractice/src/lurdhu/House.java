@@ -46,7 +46,9 @@ public class House {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         House house = (House) o;
         return rooms == house.rooms && isBalconyAvailable == house.isBalconyAvailable && Double.compare(house.size, size) == 0 && Objects.equals(color, house.color) && Objects.equals(address, house.address);
     }
