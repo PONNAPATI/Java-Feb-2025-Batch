@@ -7,4 +7,3 @@ public class clone {
         System.out.println(s1.name.equals(s2.name));
     }
 }
-gi
