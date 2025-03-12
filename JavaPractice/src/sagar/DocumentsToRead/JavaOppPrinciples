@@ -1,0 +1,294 @@
+1. Java OOP Principles
+
+    Encapsulation
+
+        Encapsulation is like restricting direct access to certain details of an object and only exposing necessary parts through methods.
+
+        public class BankAccount {
+            // 1. We declare the class BankAccount to represent a bank account concept.
+
+            private double balance;
+            // 2. We use 'private' to prevent direct access to the balance from outside.
+            //    Only methods inside this class can directly change or read 'balance'.
+
+            public BankAccount(double initialBalance) {
+                // 3. This is a constructor. It sets the initial balance for the account.
+                balance = initialBalance;
+            }
+
+            public double getBalance() {
+                // 4. A public 'getter' method to read the current balance.
+                //    It's the only way for other classes to find out the balance.
+                return balance;
+            }
+
+            public void deposit(double amount) {
+                // 5. A public method for depositing money into the account.
+                //    It checks if the amount is valid, then adds it to the balance.
+                if (amount > 0) {
+                    balance += amount;
+                }
+            }
+
+            public void withdraw(double amount) {
+                // 6. A public method for withdrawing money.
+                //    It ensures you can't withdraw more than what's in the account.
+                if (amount <= balance) {
+                    balance -= amount;
+                }
+            }
+        }
+==============================================================================================================================================================================================================================================
+    How Encapsulation Works Here
+            We hide the balance field by making it private. No one outside this class can change it directly.
+            We expose only the methods (getBalance, deposit, withdraw) that other parts of the program should use.
+            This way, you control and protect how balance is accessed or changed, ensuring valid operations on the account.
+==============================================================================================================================================================================================================================================
+
+    Abstraction
+
+        Abstraction simplifies complex systems by exposing only essential details while hiding the implementation.
+
+        // 1. We declare an abstract class named 'Shape'.
+        //    'abstract' means you cannot create an object of this class directly.
+        public abstract class Shape {
+
+            // 2. We declare an abstract method 'calculateArea'.
+            //    'abstract' indicates there's no method body here, just a declaration.
+            //    Subclasses must provide the actual implementation.
+            public abstract double calculateArea();
+        }
+
+        // 3. We declare a concrete class 'Circle' that extends 'Shape'.
+        //    Since 'Shape' is abstract, 'Circle' must define all abstract methods.
+        public class Circle extends Shape {
+
+            private double radius;
+            // 4. We keep 'radius' private. This is part of encapsulation,
+            //    but it also shows we're hiding direct access to the data.
+
+            public Circle(double radius) {
+                // 5. Constructor sets up the circle with a given radius.
+                this.radius = radius;
+            }
+
+            @Override
+            public double calculateArea() {
+                // 6. Here, we provide the actual implementation
+                //    of 'calculateArea' for a circle.
+                return Math.PI * radius * radius;
+            }
+        }
+
+        // 7. In your main program or another class, you could create a 'Circle' object
+        //    and use the abstract 'Shape' reference to call 'calculateArea' without
+        //    worrying about how it's calculated internally:
+
+        public class Main {
+            public static void main(String[] args) {
+                Shape myShape = new Circle(5.0);
+                // 8. Even though 'myShape' is a 'Shape' type, it refers to a 'Circle' object.
+                //    This way, we're focusing on the abstract idea of a 'Shape',
+                //    not its specific implementation details.
+
+                double area = myShape.calculateArea();
+                // 9. We call 'calculateArea' without needing to know exactly
+                //    how a circle's area is computed. The actual implementation
+                //    is in the 'Circle' class.
+
+                System.out.println("Area: " + area);
+                // 10. Displays the calculated area.
+            }
+        }
+============================================================================================================================================================================================================================================
+    How Abstraction Works Here
+        The abstract class Shape exposes only the essential idea: a shape can calculate its area.
+        The implementation details (like how to calculate a circle’s area) are hidden inside Circle.
+        Anyone using a Shape just needs to call calculateArea()—they don’t need the specifics of how each shape is drawn or measured. This simplifies complex systems by only showing what’s necessary.
+============================================================================================================================================================================================================================================
+
+    Inheritance
+
+        Inheritance enables one class to acquire properties and behaviors of another class, promoting code reuse.
+
+        // 1. The 'Animal' class acts as a parent (or base) class.
+        public class Animal {
+
+            private String name;
+            // 2. 'name' is private, meaning only methods inside 'Animal' can access it.
+
+            public Animal(String name) {
+                // 3. Constructor sets the animal's name.
+                this.name = name;
+            }
+
+            public void eat() {
+                // 4. A common behavior: all animals eat.
+                System.out.println(name + " is eating...");
+            }
+        }
+
+        // 5. 'Dog' is a child (or subclass) of 'Animal'.
+        //    It acquires 'Animal' properties and behaviors.
+        public class Dog extends Animal {
+
+            public Dog(String name) {
+                // 6. We call the parent (Animal) constructor to set the dog's name.
+                super(name);
+            }
+
+            public void bark() {
+                // 7. A behavior specific to dogs.
+                System.out.println("Woof!");
+            }
+        }
+
+        // 8. Demonstration in a main or separate class.
+        public class Main {
+            public static void main(String[] args) {
+                Dog dog = new Dog("Buddy");
+                // 9. We've created a 'Dog' object called 'dog'.
+                //    'Dog' inherits the 'name' field and the 'eat()' method from 'Animal'.
+
+                dog.eat();   // From the Animal class
+                dog.bark();  // Unique to the Dog class
+            }
+        }
+
+===========================================================================================================================================================================================================================================
+    How Inheritance Works Here
+        Dog extends Animal, meaning it inherits fields and methods from Animal.
+        We don’t need to rewrite the name field or the eat() method in Dog because it already inherits them from Animal.
+        Dog can also have its own extra behavior, such as bark(), making the code more organized and reusable.
+============================================================================================================================================================================================================================================
+
+    Polymorphism
+
+        Polymorphism allows a single method to have different implementations in different classes.
+
+        // 1. The 'Animal' class is our parent class.
+        public class Animal {
+            public void makeSound() {
+                // 2. A general method that prints a generic animal sound.
+                System.out.println("Some generic animal sound...");
+            }
+        }
+
+        // 3. The 'Dog' class extends 'Animal',
+        //    so it inherits everything from 'Animal'.
+        public class Dog extends Animal {
+            @Override
+            public void makeSound() {
+                // 4. We "override" the makeSound() method
+                //    to provide a Dog-specific sound.
+                System.out.println("Woof! Woof!");
+            }
+        }
+
+        // 5. Another child class, 'Cat'.
+        public class Cat extends Animal {
+            @Override
+            public void makeSound() {
+                // 6. This time, we override makeSound() for a Cat-specific sound.
+                System.out.println("Meow! Meow!");
+            }
+        }
+
+        // 7. In a main class, we demonstrate polymorphism.
+        public class Main {
+            public static void main(String[] args) {
+                // 8. We create an array of 'Animal' references.
+                //    Each reference can point to a different subclass of 'Animal'.
+                Animal[] animals = new Animal[3];
+
+                // 9. Assign different Animal subclasses to each array element.
+                animals[0] = new Animal();
+                animals[1] = new Dog();
+                animals[2] = new Cat();
+
+                // 10. We loop through the array and call the same method 'makeSound()'
+                //     on each object.
+                for (Animal animal : animals) {
+                    animal.makeSound();
+                    // 11. Even though we use the same method name,
+                    //     the actual behavior changes depending on the object's type.
+                }
+            }
+        }
+==============================================================================================================================================================================================================================================
+    How Polymorphism Works Here
+        The same method name (makeSound()) is used in different classes (Animal, Dog, Cat).
+        When you call makeSound() on an Animal reference, the actual method that runs depends on the type of the object (e.g., Dog, Cat).
+        This is polymorphism: one method name, but many forms or implementations.
+==============================================================================================================================================================================================================================================
+2. Exception Handling
+
+    Custom Exceptions (TransactionException)
+
+        Custom exceptions are user-defined error handlers that improve code readability and debugging.
+
+    **Try-Catch Blocks in **``
+
+        Try-catch blocks prevent runtime crashes by handling errors gracefully.
+
+        // 1. We create our own exception class called 'TransactionException'.
+        //    It extends the built-in 'Exception' class, making it a checked exception.
+        public class TransactionException extends Exception {
+
+            // 2. Constructor that takes an error message and passes it
+            //    to the parent (Exception) class.
+            public TransactionException(String message) {
+                super(message);
+            }
+        }
+
+        // 3. A class to manage transactions.
+        public class TransactionManager {
+
+            // 4. A method that processes a transaction amount.
+            //    It throws 'TransactionException' if the amount is invalid.
+            public void processTransaction(double amount) throws TransactionException {
+                // 5. We check if the amount is non-positive (e.g., negative or zero).
+                //    If so, we throw our custom 'TransactionException' with a message.
+                if (amount <= 0) {
+                    throw new TransactionException("Invalid transaction amount: " + amount);
+                }
+
+                // 6. If the amount is positive, we pretend to process it.
+                System.out.println("Processing transaction of $" + amount);
+            }
+        }
+
+        // 7. A 'Main' class to test our exception handling.
+        public class Main {
+            public static void main(String[] args) {
+                TransactionManager manager = new TransactionManager();
+
+                try {
+                    // 8. We call 'processTransaction' with a negative value
+                    //    to intentionally trigger our custom exception.
+                    manager.processTransaction(-50);
+                } catch (TransactionException e) {
+                    // 9. The 'catch' block catches 'TransactionException' if it is thrown.
+                    //    We print the error message, preventing a crash.
+                    System.err.println("Transaction failed: " + e.getMessage());
+                } finally {
+                    // 10. The 'finally' block (optional) will always run,
+                    //     whether or not an exception occurs.
+                    System.out.println("End of transaction attempt.");
+                }
+            }
+        }
+==============================================================================================================================================================================================================================================
+Key Takeaways
+    1.Custom Exception (TransactionException)
+
+        Lets you define your own error type.
+        Makes error messages more descriptive and specific to your application.
+
+    2.Try-Catch
+
+        Try: The risky code goes here (e.g., processing a transaction).
+        Catch: Handles the exception if one occurs (e.g., printing an error message instead of crashing).
+        Finally (Optional): Always runs, often used for cleanup actions.
+===============================================================================================================================================================================================================================================
