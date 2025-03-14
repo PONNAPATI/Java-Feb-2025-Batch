@@ -23,7 +23,7 @@ public class Maths_In_Java {
         int SQRT = (int) Math.sqrt(D); // we did narrow casting from sqrt(double) to convert it to Int
         System.out.println(" the Square root of value D: "+SQRT);
 
-        System.out.println(" the Square root of value D: "+Math.sqrt(E));// else we can directly declare it in sout
+        System.out.println(" the Square root of value E: "+Math.sqrt(E));// else we can directly declare it in sout
 
         double sqrt = Math.sqrt(81);
         System.out.println(" the square root of 81: "+sqrt);
