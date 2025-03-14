@@ -1,0 +1,38 @@
+/.gradle/
+/build/
+*.idea
+*.settings
+*.classpath
+*.project
+/buildSrc/
+/bin/
+*build/
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
+
+### MAC Related ###
+*.DS_Store
+
+### logs ###
+logs/
+log/
+
+**/out/**
+**/.cucumber+/**
+*/lib/*
+*/build/*
+*/bin/*
+
+*/*/out/*
+*/*/lib/*
+*/*/build/*
+*/*/bin/*
+
+/lib/
+*.class
+*.log
+
+lombok.config
+event_subscription.db
