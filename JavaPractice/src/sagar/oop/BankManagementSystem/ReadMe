@@ -1,0 +1,73 @@
+Encapsulation
+
+    Encapsulation is the practice of restricting direct access to certain details of an object and only exposing necessary parts through methods. In this project, private variables
+    (e.g., balance in Account class) ensure data security, while public methods (e.g., deposit() and withdraw()) allow controlled access.
+
+Abstraction
+
+    Abstraction simplifies complex systems by exposing only essential details while hiding the implementation. In this project, the abstract class Account defines common behaviors, ensuring that specific account types
+    (e.g., SavingsAccount, CheckingAccount) implement their own withdrawal methods.
+
+Inheritance
+
+    Inheritance enables one class to acquire properties and behaviors of another class, promoting code reuse. In this project, SavingsAccount and CheckingAccount inherit from Account,
+    allowing them to use common methods while also implementing their own withdrawal rules.
+
+Polymorphism
+
+    Polymorphism allows a single method to have different implementations in different classes. In this project, the withdraw() method is overridden in SavingsAccount and CheckingAccount,
+    ensuring each account type follows its own withdrawal rules while maintaining a unified interface.
+
+
+Exception Handling
+
+    Custom Exceptions (TransactionException)
+
+        Custom exceptions are user-defined error handlers that improve code readability and debugging. In this project, TransactionException is thrown when insufficient balance or invalid transactions occur.
+
+Try-Catch Blocks in Main.java
+
+        Try-catch blocks prevent runtime crashes by handling errors gracefully. In this project, transactions are wrapped in try-catch blocks to catch TransactionException and display meaningful error messages instead of abrupt failures.
+
+
+Class Breakdown
+
+1. Account (Abstract Class)
+
+        Defines common properties (accountNumber, accountHolder, balance).
+
+        Provides methods for deposit, transfer, and displaying account details.
+
+        Enforces implementation of withdraw() in subclasses.
+
+2. SavingsAccount (Child Class of Account)
+
+        Enforces a minimum balance rule.
+
+        Overrides withdraw() to check if balance remains above the limit.
+
+        Uses exception handling to prevent overdrawing.
+
+3. CheckingAccount (Child Class of Account)
+
+        Allows overdrafts up to a limit.
+
+        Overrides withdraw() to permit overdraft withdrawals.
+
+        Uses exception handling to ensure overdraft is within limits.
+
+4. Bank (Manages Accounts)
+
+        Maintains a list of accounts using ArrayList.
+
+        Adds and displays accounts.
+
+5. TransactionException (Custom Exception)
+
+        Extends Exception to handle errors like insufficient balance and invalid transfers.
+
+6. Main (Program Execution)
+
+        Creates accounts and performs transactions.
+
+        Uses try-catch blocks to handle exceptions.

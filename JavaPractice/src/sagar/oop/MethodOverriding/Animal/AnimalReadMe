@@ -1,0 +1,33 @@
+Explanation
+    Inheritance
+
+        Dog and Cat extend Animal. This means they get all non-private members from Animal.
+        By using the extends keyword, Dog and Cat become subclasses of Animal.
+
+Method Overriding
+
+        Both Dog and Cat override the makeSound() method that is defined in Animal.
+        Overriding requires the same method signature, so it’s the exact same name, parameters, and return type.
+        The @Override annotation helps ensure we’re actually overriding and not accidentally creating a new method.
+
+Polymorphism
+
+        We store a Dog object in a variable of type Animal, and a Cat object in a variable of type Animal.
+        When makeSound() is called, Java checks the actual object type at runtime (either Dog or Cat) and decides which makeSound() method to call.
+        This is known as dynamic dispatch—a core principle of polymorphism in OOP.
+
+Usage
+
+        The main method (public static void main(String[] args)) creates one Animal, one Dog, and one Cat object.
+        Each object calls makeSound(), producing different console outputs depending on the object’s type.
+
+Why This Matters
+
+        It demonstrates how different subclasses can reuse a parent’s interface/method signature but provide unique behaviors.
+        Polymorphism allows your code to handle different objects (e.g., Dog and Cat) in a uniform way (through Animal references) while still accessing each object’s specialized behavior at runtime.
+
+Final Takeaway
+
+        Animal is the base class with a makeSound() method.
+        Dog and Cat are child classes that override makeSound() to produce specific sounds.
+        In the main method, each variable’s actual object type determines which version of makeSound() runs, showcasing runtime polymorphism.
