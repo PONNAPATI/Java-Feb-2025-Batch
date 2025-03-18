@@ -14,6 +14,15 @@ public class ArrayListDemo {
 
         List<String> myList = new ArrayList<>();
 
+        // default size is 8
+        // String[] myList = new String[8];
+        // if (myList.size() is 80% defaultSize){   // myList.size = 10
+             // they write a logic to increase the size of the array
+             // String[] newArray = new String[myList.size() + 5]; // 10 + 5 = 15
+             // newArray = myList;
+        // }
+
+
         myList.add("Dinesh");
         myList.add("Sahithi");
         myList.add("Sagar");
@@ -22,8 +31,13 @@ public class ArrayListDemo {
         myList.add("Deepthi");
         myList.add("Shiva");
 
+
+
+
+
         myList.add("Sahithi");
         myList.add("Dinesh");
+        myList.add("Guru");
 
         printListElements(myList);
 
@@ -40,6 +54,18 @@ public class ArrayListDemo {
         printListElements(myList);
 
         System.out.println("getting sublist form 1st index to 4th index : "  + myList.subList(1, 4));
+
+
+
+        System.out.println("getting index of specific object : " + myList.indexOf("Rohit"));
+
+        System.out.println("getting last index of specific object : " + myList.lastIndexOf("Sahithi"));
+
+
+        myList.clear();
+        System.out.println("printing the list after clear()....");
+        printListElements(myList);
+
 
     }
 
