@@ -8,7 +8,7 @@ public class Team_school_2 implements Sports_meet{
 
     @Override
     public void Cricket() {
-        int players_squad_count = 17;
+        int players_squad_count = 18;
         String Caption_name = "Vikas";
         long coach_phone_number = 262782822;
         float Average_economy_of_bowlers = 7.68f;
