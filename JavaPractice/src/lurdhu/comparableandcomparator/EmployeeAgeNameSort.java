@@ -5,6 +5,14 @@ import java.util.Comparator;
 public class EmployeeAgeNameSort implements Comparator<Employee> {
     @Override
     public int compare(Employee emp1, Employee emp2) {
-        return (int) (emp1.getSalary() - emp2.getSalary());
+        // Compare by salary (descending)
+        int salaryCompare = Double.compare(emp1.getSalary(), emp2.getSalary());
+
+        // If salaries are equal, compare by name (ascending)
+        if (salaryCompare == 0) {
+            return emp1.getName().compareTo(emp2.getName());
+        }
+
+        return salaryCompare;
     }
 }

@@ -27,16 +27,23 @@ public class ComparatorDemo {
         e3.setEmailId("nikki@gmail.com");
         e3.setSalary(8000);
 
+        Employee e4 = new Employee();
+        e4.setId(1003);
+        e4.setName("Aman");
+        e4.setEmailId("vlad@gmail.com");
+        e4.setSalary(5000);
+
         employees.add(e1);
         employees.add(e2);
         employees.add(e3);
+        employees.add(e4);
 
+        System.out.println("---------------");
         System.out.println("employees before sorting : " + employees );
-
-//        Collections.sort(employees);
 
         Collections.sort(employees, new EmployeeAgeNameSort());
 
+        System.out.println("---------------");
         System.out.println("employees after sorting : " + employees );
     }
 }
