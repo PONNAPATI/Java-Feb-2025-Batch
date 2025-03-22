@@ -29,7 +29,7 @@ public class ComparatorDemo {
 
         Employee e4 = new Employee();
         e4.setId(1003);
-        e4.setName("Aman");
+        e4.setName("Vlad");
         e4.setEmailId("vlad@gmail.com");
         e4.setSalary(5000);
 
@@ -41,7 +41,10 @@ public class ComparatorDemo {
         System.out.println("---------------");
         System.out.println("employees before sorting : " + employees );
 
-        Collections.sort(employees, new EmployeeAgeNameSort());
+//        Collections.sort(employees, new EmployeeSalaryNameSort());
+
+
+        Collections.sort(employees, new EmployeeSalarySort());
 
         System.out.println("---------------");
         System.out.println("employees after sorting : " + employees );

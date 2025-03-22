@@ -2,7 +2,7 @@ package src.lurdhu.comparableandcomparator;
 
 import java.util.Comparator;
 
-public class EmployeeAgeNameSort implements Comparator<Employee> {
+public class EmployeeSalaryNameSort implements Comparator<Employee> {
     @Override
     public int compare(Employee emp1, Employee emp2) {
         // Compare by salary (descending)
