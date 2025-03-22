@@ -34,7 +34,7 @@ public class String_Methods {
         //Concat
         // Concatting string to existing
         String concat = Java.concat("and also thanks"); // Concating string to existing
-        System.out.println("Conacating a statement to exix=sting string:" +concat);
+        System.out.println("Conacating a statement to existing string:" +concat);
         System.out.println(Java+"\n");
 
 
