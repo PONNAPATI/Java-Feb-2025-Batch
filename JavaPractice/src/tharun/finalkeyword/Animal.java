@@ -5,7 +5,7 @@ public class Animal {
 
         System.out.println("Animal makes sound");
     }
-    public class Dog extends Animal{
+    public static class Dog extends Animal{
 
         // if we remove the comments it wil gives you compile time error
 //        public void sound(){
