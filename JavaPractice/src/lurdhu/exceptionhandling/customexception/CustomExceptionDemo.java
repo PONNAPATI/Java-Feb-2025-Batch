@@ -1,4 +1,4 @@
-package src.lurdhu.customexception;
+package src.lurdhu.exceptionhandling.customexception;
 
 public class CustomExceptionDemo {
     public static void main(String[] args) {

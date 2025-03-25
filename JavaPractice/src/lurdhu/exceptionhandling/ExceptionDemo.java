@@ -1,4 +1,4 @@
-package src.lurdhu;
+package src.lurdhu.exceptionhandling;
 
 public class ExceptionDemo {
     public static void main(String[] args) {

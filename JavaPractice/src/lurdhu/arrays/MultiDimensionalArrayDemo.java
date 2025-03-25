@@ -1,4 +1,4 @@
-package src.lurdhu;
+package src.lurdhu.arrays;
 
 public class MultiDimensionalArrayDemo {
     public static void main(String[] args) {

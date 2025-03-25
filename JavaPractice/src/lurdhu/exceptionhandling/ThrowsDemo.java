@@ -1,4 +1,4 @@
-package src.lurdhu;
+package src.lurdhu.exceptionhandling;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
