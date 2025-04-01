@@ -7,9 +7,8 @@ import java.util.Optional;
 public class UserDetailsWithOptional {
 
     public Optional<String> getUserName() {
-        Optional<String> studentName = Optional.of("Rohit");
         // Gets the username from database by making a call to database
         // Assume that the database is giving null for the username and same null is returned to the caller
-        return Optional.empty();
+        return Optional.ofNullable(null);
     }
 }
