@@ -2,12 +2,13 @@ package shivaji;
 
 public class ArraysDemo {
     public static void main(String[] args) {
-        String[] names = {"Swathi","Shiva","Yashu","Rajesh","Siddhu"};
-//        System.out.println(names[0]+ " - "+names[1]);
-        for (int i=0;i< names.length;i++)
+        int i[] = {1,2,3,4,5};
+        int a=i.length;
+        int b=0;
+        for (int j=i[b]; j<a+1;j++ )
         {
-            System.out.println(names[i]);
+            System.out.println(j);
+            b++;
         }
-
     }
 }

@@ -12,8 +12,8 @@ public class String_Methods {
         System.out.println("index of INT: " +indexof);
 
         //indexof(Character,beginindex,endindex) or (String,beginindex,endindex)
-        int indexof_2 = Java.indexOf("are", 10, 40);//search for particular string from given starting index value to end index value
-        System.out.println("beginning and end index of char:" +indexof_2);
+//        int indexof_2 = Java.indexOf("are", 10, 40);//search for particular string from given starting index value to end index value
+//        System.out.println("beginning and end index of char:" +indexof_2);
 
         //indexof(ch)
         int indexof_3 = Java.indexOf("r");  //index of particular character with first occurance(similar to string)
@@ -34,7 +34,7 @@ public class String_Methods {
         //Concat
         // Concatting string to existing
         String concat = Java.concat("and also thanks"); // Concating string to existing
-        System.out.println("Conacating a statement to exix=sting string:" +concat);
+        System.out.println("Conacating a statement to existing string:" +concat);
         System.out.println(Java+"\n");
 
 
