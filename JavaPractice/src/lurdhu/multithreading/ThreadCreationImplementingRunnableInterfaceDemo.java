@@ -5,13 +5,13 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class ThreadCreationImplementingRunnableInterfaceDemo {
     public static void main(String[] args) {   // main method is one thread
-        Thread thread1 = new Thread(new Student());
+        Thread thread1 = new Thread(new src.lurdhu.multithreading.Student());
 
 //        Thread thread1 = new Thread(() -> {
 //            System.out.println("Thread name is : " + Thread.currentThread().getName());
 //        });
 
-        Thread thread2 = new Thread(new Student());
+        Thread thread2 = new Thread(new src.lurdhu.multithreading.Student());
 
         thread1.setName("my-thread-1");
         thread2.setName("my-thread-2");
