@@ -7,7 +7,7 @@ public class If_Ifelse_Nestedif {
 
         /*Write a Java program to solve quadratic equations (use if, else if and else).
 
-        Test Data
+        TestDemo Data
         Input a: 1
         Input b: 5
         Input c: 1*/

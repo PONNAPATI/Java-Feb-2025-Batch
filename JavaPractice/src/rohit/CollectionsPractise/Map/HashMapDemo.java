@@ -15,7 +15,7 @@ public class HashMapDemo {
         hmd.put(5, "Venkata");
 
         System.out.println(hmd);
-        hmd.put(1,"Test");
+        hmd.put(1,"TestDemo");
         System.out.println(hmd);
 
         System.out.println(hmd.get(2));
