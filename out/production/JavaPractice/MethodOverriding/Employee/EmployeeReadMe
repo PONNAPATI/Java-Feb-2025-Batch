@@ -1,0 +1,27 @@
+Explanation
+    Inheritance:
+
+        Developer and Manager extend Employee, sharing its name field and work() method signature.
+        By extending, they can reuse the constructor logic (through super(name)) and any other code in Employee.
+
+Method Overriding:
+
+        Both Developer and Manager override the work() method from Employee.
+        The method signatures are identical (public void work()), but the implementations differ.
+        The @Override annotation clarifies that these methods replace the parent’s implementation.
+
+Polymorphism:
+
+        In the main method, variables e2 and e3 are declared as type Employee but are assigned instances of Developer and Manager.
+        When we call e2.work() or e3.work(), Java dynamically selects the overridden method in the actual object type at runtime (i.e., Developer or Manager).
+
+Usage:
+
+        You can treat all of these objects (Employee, Developer, Manager) uniformly under the type Employee, while they still exhibit specialized behavior.
+        This design pattern is useful in larger applications where you want to handle different employee roles consistently but still allow for role-specific tasks.
+
+Thus, the program showcases fundamental OOP concepts:
+
+        Inheritance (child classes inherit parent features),
+        Method Overriding (children redefine parent methods),
+        Polymorphism (the actual method called depends on the object’s real type, even if the reference is of the parent type).
